@@ -1,17 +1,15 @@
-# UPitts_InformationSecurityAndPrivacy
-First Semester, Information Security and Privacy
-IS-2150/TEL2810: Information Security and Privacy, Fall 2017
-Programming Project
-Deadline: Nov 30, 2017
-Note: This project can be done in groups of 2 members each.
-1. Message Digest [15 Points]
+# UPitts_InformationSecurityAndPrivacy    
+First Semester, Information Security and Privacy    
+IS-2150/TEL2810: Information Security and Privacy, Fall 2017    
+Programming Project     
+1. Message Digest [15 Points]    
 Write a program to demonstrate the use of hashing using MD5 and SHA scheme and the
 MessageDigest class.
 Your program should allow a user to enter a string; the program then hashes it and outputs the result.
 You will need to consult Java API documentation to learn how to use java classes. You can
 download and install the documentation yourself, or you can access them from this URL:
 http://java.sun.com/j2se/1.4.2/docs/api/index.html
-2. Crypto Techniques
+2. Crypto Techniques    
 The objective of this exercise is to use Java features to write some security mechanisms that can
 be used in applications. You will be using the classes from Java Cryptographic Extension to
 implement them.
@@ -23,16 +21,16 @@ Inside Java 2 Platform Security, 2nd Edition, L. Gong, G. Ellision, M. Dageforde
 Java Security, Scott Oaks, O’Reilly
 For each part of the assignment, skeleton Java code has been provided. These skeletons will NOT
 compile. You will need to make modifications on them before they can be successfully compiled and
-run.
-2.1) Signature [15 points]
+run.    
+2.1) Signature [15 points]    
 In this part of the assignment, you are to implement the ElGamal Signature scheme described in the
 textbook in section 10.6.2.2.
 There are two classes in this assignment, ElGamalAlice and ElGamalBob, corresponding to the
 sender (Alice) and the receiver (Bob). The main functions for both the classes have been written for
 you. Your assignment is to write various functions that implement ElGamal key generation and
 signature creation algorithms (for Alice), and signature verification algorithm (for Bob). The
-functions you have to implement are indicated in the source files.
-2.2 Encryption [20 points]
+functions you have to implement are indicated in the source files.    
+2.2 Encryption [20 points]    
 In this part of the assignment, the client program CipherClient should (1) generate a DES key
 and stores the key in a file, (2) encrypts the given String object using that key and sends the
 encrypted object over the socket to the server. The server program CipherServer then uses
@@ -42,19 +40,19 @@ The server should then print out the decrypted message. For this part of the ass
 will need to consult external sources and documentations on how to generate a DES key,
 write to or read from a file, and perform encryption/decryption of an object.
 Most of the needed information should be available at:
-http://java.sun.com/products/jce/doc/guide/API_users_guide.html
-3. Breaking a Substitution Cipher
+http://java.sun.com/products/jce/doc/guide/API_users_guide.html    
+3. Breaking a Substitution Cipher    
 The objective of this component of the project is to demonstrate the vulnerabilities of simple
 substitution ciphers. You will implement a simple mono-alphabetic substitution namely a shift
 cipher and break its key using alphabet frequency correlation.
-Description:
-3.1 [15 points]
+Description:    
+3.1 [15 points]    
 In the first part of this assignment, you need to implement the encryption and decryption
 algorithms for a shift cipher. Your encryption program should take the encryption key and the
 plain text (an input file) as inputs and should produce the cipher text as an output file. Similarly,
 your decryption program takes the key and the cipher text file as an input and produces the plain
-text back.
-3.2 [35 points]
+text back.    
+3.2 [35 points]    
 For the second part of this lab assignment, you will implement a cryptanalysis tool to break the
 shift cipher that you implemented in the first part. Concretely, your program should a ciphertext
 as input, find the frequency of distribution of the letters in the cipher-text and compute its
@@ -63,7 +61,7 @@ program should display the encryption keys and plain texts corresponding to top 
 with their correlation values. Table 1 shows the frequency distribution of the English alphabets
 and you need to use these exact values for the frequency distribution of plain text characters.
 An illustrative example is shown below to explain the various steps involved in the cryptanalysis
-process.
+process.    
 Consider a plaintext P :HELLO WORLD and C (ciphertext): khoor zruog
 It is obtained as a result of a shift cipher with key k = 3
 ci=E(pi)=pi+3 mod 26
