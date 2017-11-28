@@ -9,7 +9,7 @@ public class Message_digest {
 		System.out.println("Please type the word that will be hashed");
 		Scanner input = new Scanner(System.in);
 		
-		String plaintext = input.next();
+		String plaintext = input.nextLine();
 		MessageDigest md_md5 = MessageDigest.getInstance("MD5");
 		MessageDigest md_sha = MessageDigest.getInstance("SHA");
 		md_md5.update(plaintext.getBytes());

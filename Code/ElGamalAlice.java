@@ -42,7 +42,7 @@ public class ElGamalAlice
 	{
 		String message = "The quick brown fox jumps over the lazy dog.";
 		
-		String host = "paradox.sis.pitt.edu";
+		String host = "localhost";
 		int port = 7999;
 		Socket s = new Socket(host, port);
 		ObjectOutputStream os = new ObjectOutputStream(s.getOutputStream());

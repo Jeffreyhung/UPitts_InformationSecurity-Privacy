@@ -9,7 +9,7 @@ public class CipherClient
 	public static void main(String[] args) throws Exception 
 	{
 		String message = "The quick brown fox jumps over the lazy dog.";
-		String host = "paradox.sis.pitt.edu";
+		String host = "localhost";
 		int port = 7999;
 		Socket s = new Socket(host, port);
 		ObjectOutputStream os = new ObjectOutputStream(s.getOutputStream());
@@ -29,9 +29,12 @@ public class CipherClient
         Cipher cipher = Cipher.getInstance("DES");  
         cipher.init(Cipher.ENCRYPT_MODE, secretkey, ran2);  
         byte[] encryptresult = cipher.doFinal(message.getBytes());  
+		String encryptresult_string = new String(encryptresult);
         System.out.println("Plaintext : "+ message);
-        System.out.println("Ciphertext : "+new String(encryptresult));
+        System.out.print("Ciphertext : ");
+		System.out.println(encryptresult_string);
         //send it over socket s to the server.
         os.writeObject(encryptresult);
+        s.close();
 	}
 }
